@@ -1,0 +1,17 @@
+select _id from audio_playlists where name="WALKMAN favorites"
+select audio_id from audio_playlists_map where playlist_id=4850
+select _id from audio where playlist_id=4850
+
+select _id, _data from audio, audio_playlists  where 
+select _id.files, _data.files, _id.audio_plylists_map from files LEFT JOIN audio_playlists_map ON files._id=audio_playlists_map._id
+select _data from audio LEFT JOIN audio_playlists_map ON audio._id=audio_playlists_map.audio_id where audio_playlists_map.playlist_id=4850
+
+SELECT MYVIEWNAME.col1, MYVIEWNAME.col2
+FROM VIEWNAME AS MYVIEWNAME INNER JOIN TABLENAME AS MYTABLENAME
+ON MYVIEWNAME.col1 = MYTABLENAME.col1
+
+
+
+CREATE VIEW audio_playlists AS SELECT _id,_data,name,date_added,date_modified FROM files WHERE media_type=4
+CREATE VIEW audio as SELECT * FROM audio_meta LEFT OUTER JOIN artists ON audio_meta.artist_id=artists.artist_id LEFT OUTER JOIN albums ON audio_meta.album_id=albums.album_id
+CREATE TABLE audio_playlists_map (_id INTEGER PRIMARY KEY,audio_id INTEGER NOT NULL,playlist_id INTEGER NOT NULL,play_order INTEGER NOT NULL)
