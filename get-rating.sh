@@ -25,10 +25,11 @@ dt=$(date +%d%m%y_%H.%M)
 echo -e "\n importing to mc"
 cp mc_favorites.m3u /cygdrive/d/music.tmp/walkman\ import/WALKMAN\ favorites-$dt.m3u
 
+#need some code to write ratings directly to mc files
+cat favorites.m3u | sed 's%'/storage/sdcard1'%'/cygdrive/f/music'%g' | while read filepath; do python ./set-rating.py "$filepath"; done
+
 echo -e "\n cleaning \n"
 rm favorites.m3u mc_favorites.m3u
-
-#need some code to write ratings directly to mc files
 
 #need some code to import ratings directly in android media database
 #need some code to import MC ratings in android media database
