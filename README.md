@@ -1,4 +1,4 @@
-walkman_ratings
+walkman_ratings(not finished, in development)
 ===============
 
 pulls rating(WALKMAN favorites playlist) from sony android phones standard providers.media db and trying to write them directly to files tags(using mutagen library https://code.google.com/p/mutagen/). 
