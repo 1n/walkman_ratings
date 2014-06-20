@@ -9,3 +9,5 @@ currently works only on rooted phone, because there is no access to db (/data/da
 music files are considered to be stored only on external storage.
 
 written to work on windows with Cygwin (only affects path)
+
+need to run Instruments -> Renew Library from tags in MC to see updated ratings.
